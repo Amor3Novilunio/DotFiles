@@ -1,0 +1,33 @@
+# Ignore everything
+*
+
+# Unignore essential items
+!.gitignore
+!.zshrc
+!README.MD
+!Wallpapers/
+!.config/
+
+# Ignore all content inside .config by default
+.config/*
+
+# Unignore specific folders inside .config
+!.config/nvim/
+!.config/hypr/
+!.config/foot/
+!.config/my/
+!.config/rofi/
+!.config/waybar/
+!.config/ghostty/
+!.config/starship.toml
+!.config/README.MD
+
+
+# Unignore all files and subdirectories inside those folders
+!.config/nvim/**
+!.config/hypr/**
+!.config/foot/**
+!.config/my/**
+!.config/rofi/**
+!.config/waybar/**
+!.config/ghostty/**

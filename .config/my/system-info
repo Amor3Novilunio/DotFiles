@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+
+# Colors
+CYAN="%F{cyan}"
+WHITE="%F{white}"
+RESET="%f"
+
+# Get System Info
+USER=$USER
+HOSTNAME=$HOST
+OS=$(grep -oP '(?<=^PRETTY_NAME=").*(?="$)' /etc/os-release)
+KERNEL=$(uname -r)
+UPTIME=$(uptime -p | sed 's/up //')
+SHELL=${SHELL:t}  # Equivalent to basename "$SHELL"
+WM=$XDG_CURRENT_DESKTOP
+PACKAGES=$(nix-store --query --requisites /run/current-system | wc -l)
+
+# ASCII Art (multiline)
+ascii_art=(
+   "   ⡠⠤⢄ ⣀⣀⣀⡀⢠⡄⢠⡄"
+   "  ⠣⢄⡀⠙⢄⡀⢀⡜⠉⠉⠉"
+   "   ⠈⠑⠢⠜⠁"
+)
+
+# Calculate the max width for the info column (e.g., max length of the info strings)
+max_width=40
+
+# Loop through each line of ASCII art and print with system info
+for i in {1..3}; do
+    # Print ASCII art and system info side by side
+    print -P "%s%-${max_width}s %s" "${CYAN}${ascii_art[$i-1]}" "${WHITE}$USER@$HOSTNAME${RESET}"
+done
+
+# Print system info below
+print -P "%s%-${max_width}s %s" "" "${WHITE}OS:${RESET}       $OS"
+print -P "%s%-${max_width}s %s" "" "${WHITE}Kernel:${RESET}   $KERNEL"
+print -P "%s%-${max_width}s %s" "" "${WHITE}Uptime:${RESET}   $UPTIME"
+print -P "%s%-${max_width}s %s" "" "${WHITE}Shell:${RESET}    $SHELL"
+print -P "%s%-${max_width}s %s" "" "${WHITE}WM:${RESET}       $WM"
+print -P "%s%-${max_width}s %s" "" "${WHITE}Packages:${RESET} $PACKAGES"

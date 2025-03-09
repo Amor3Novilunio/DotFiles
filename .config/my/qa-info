@@ -1,0 +1,83 @@
+#!/usr/bin/env zsh
+
+# Colors
+CYAN="%F{cyan}"
+GREEN="%F{green}"
+YELLOW="%F{yellow}"
+WHITE="%F{white}"
+RESET="%f"
+
+# ASCII Art Header
+
+# Hyprland Shortcuts Section
+print -P "\n${YELLOW}Hyprland Shortcuts${RESET}                    | ${WHITE}DESCRIPTION${RESET}"
+print -P "${CYAN}_____________________________________________________________________________________${RESET}"
+print -P "${WHITE}SUPER + SHIFT + RIGHT${RESET}                 | Move to next workspace"
+print -P "${WHITE}SUPER + SHIFT + LEFT${RESET}                  | Move to previous workspace"
+print -P "${WHITE}SUPER + F11${RESET}                           | Transfer Focused Window To Next Workspace"
+print -P "${WHITE}SUPER + F12${RESET}                           | Transfer Focused Window To Previous Workspace"
+print -P "${WHITE}F1${RESET}                                    | ROFI"
+print -P "${WHITE}SUPER + Q${RESET}                             | Opens Terminal"
+print -P "${WHITE}alt + F4${RESET}                              | Kills focused window"
+print -P "${WHITE}SUPER + E${RESET}                             | Thunar (File Manager)"
+print -P "${WHITE}SUPER + \\\\${RESET}                             | Shift Focused Window"
+print -P "${WHITE}SUPER + arrowkeys${RESET}                     | Shift window Focus"
+print -P "${WHITE}SUPER + TAB${RESET}                           | Cycle Through Workspaces that have windows"
+print -P "${WHITE}SUPER + Hold Mouse Left Button${RESET}        | Move Window"
+print -P "${WHITE}SUPER + Hold Mouse Right Button${RESET}       | Resize Window"
+print -P "${WHITE}SUPER + END${RESET}                           | Logout"
+print -P "${CYAN}____________________________________________________${RESET}"
+
+# Paths Section
+print -P "\n${YELLOW}Paths${RESET}                                 | ${WHITE}DESCRIPTION${RESET}"
+print -P "${CYAN}________________________________________________________________${RESET}"
+print -P "${WHITE}open-nix-path${RESET}                         | Cd Nix Configuration"
+print -P "${WHITE}open-work${RESET}                             | Cd Work repository"
+print -P "${WHITE}open-hypr-path${RESET}                        | Cd hyprland configs path"
+print -P "${WHITE}open-waybar-path${RESET}                      | Cd waybar configs path"
+print -P "${WHITE}open-rofi-path${RESET}                        | Cd rofi configs path"
+print -P "${WHITE}open-pyprland-path${RESET}                    | Cd pyprland configs path"
+print -P "${WHITE}open-foot-path${RESET}                        | Cd foot configs path"
+print -P "${WHITE}open-nvim-path${RESET}                        | Cd neovim configs path"
+print -P "${WHITE}open-kitty-path${RESET}                       | Cd kitty configs path"
+print -P "${WHITE}open-my${RESET}                               | Custom Scripts"
+print -P "${CYAN}____________________________________________________${RESET}"
+
+# NixOS Configs Section
+print -P "\n${YELLOW}NixOS Configs${RESET}                         | ${WHITE}DESCRIPTION${RESET}"
+print -P "${CYAN}_______________________________________________________________________________${RESET}"
+print -P "${WHITE}nix-rbs${RESET}                               | Run nix-rebuild switch"
+print -P "${WHITE}nix-clear-garbages${RESET}                    | Run nix-collect-garbage -d"
+print -P "${WHITE}nix-config${RESET}                            | Edit configuration.nix"
+print -P "${WHITE}nix-alias-config${RESET}                      | Edit alias-configuration.nix"
+print -P "${WHITE}nix-audio-config${RESET}                      | Edit audio-configuration.nix"
+print -P "${WHITE}nix-display-manager-config${RESET}            | Edit display-manager-configuration.nix"
+print -P "${WHITE}nix-hardware-config${RESET}                   | Edit hardware-ext-configuration.nix"
+print -P "${WHITE}nix-network-config${RESET}                    | Edit network-configuration.nix"
+print -P "${WHITE}nix-package-config${RESET}                    | Edit package-configuration.nix"
+print -P "${WHITE}nix-services-config${RESET}                   | Edit services-configuration.nix"
+print -P "${WHITE}nix-time-zone-config${RESET}                  | Edit time-zone-configuration.nix"
+print -P "${WHITE}nix-user-config${RESET}                       | Edit user-configuration.nix"
+print -P "${CYAN}____________________________________________________${RESET}"
+
+# Work Section
+print -P "\n${YELLOW}Work${RESET}                                  | ${WHITE}DESCRIPTION${RESET}"
+print -P "${CYAN}________________________________________________________________${RESET}"
+print -P "${WHITE}vixor-fe${RESET}                              | Open vixor-fe in VSCode"
+print -P "${CYAN}____________________________________________________${RESET}"
+
+# Configs Section
+print -P "\n${YELLOW}Configs${RESET}                               | ${WHITE}DESCRIPTION${RESET}"
+print -P "${CYAN}___________________________________________________________${RESET}"
+print -P "${WHITE}hypr-config${RESET}                           | Edit hyprland.conf"
+print -P "${WHITE}rofi-config${RESET}                           | Edit config.rasi"
+print -P "${WHITE}waybar-config${RESET}                         | Edit config"
+print -P "${WHITE}waybar-style${RESET}                          | Edit style.css"
+print -P "${WHITE}starship-config${RESET}                       | Edit starship.toml"
+print -P "${WHITE}zsh-config${RESET}                            | Edit .zshrc"
+print -P "${WHITE}foot-config${RESET}                           | Edit foot.ini"
+print -P "${WHITE}kitty-config${RESET}                          | Edit kitty.conf"
+print -P "${WHITE}nvim-config${RESET}                           | Edit init.vim"
+print -P "${WHITE}qa-info-config${RESET}                        | Edit Quick Access Info"
+print -P "${WHITE}system-info-config${RESET}                    | Edit System Information"
+print -P "${CYAN}____________________________________________________${RESET}"
