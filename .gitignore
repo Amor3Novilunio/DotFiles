@@ -6,7 +6,10 @@
 !.zshrc
 !README.MD
 !Wallpapers/
+!Wallpapers/**
 !.config/
+
+
 
 # Ignore all content inside .config by default
 .config/*
